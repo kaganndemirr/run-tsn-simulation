@@ -1,0 +1,36 @@
+{
+  "experiments" : [
+    {
+      "routing": "phy",
+      "pathFindingMethod": "shortestPath",
+      "algorithm": "dijkstra",
+      "idleSlope": "0.75",
+      "tsnSimulationVersion": "tsncf",
+      "evaluatorName": "avbLatencyMathV1",
+      "rate": 1000
+    },
+    {
+      "routing": "phy",
+      "pathFindingMethod": "yen",
+      "algorithm": "U",
+      "idleSlope": "0.75",
+      "tsnSimulationVersion": "tsncf",
+      "evaluatorName": "avbLatencyMathV1",
+      "k": [2, 3, 4, 20, 30],
+      "rate": 1000
+    },
+    {
+      "routing": "phy",
+      "pathFindingMethod": "yen",
+      "algorithm": "RO",
+      "idleSlope": 0.75,
+      "tsnSimulationVersion": "tsncf",
+      "evaluatorName": "avbLatencyMathV1",
+      "k": [2, 3, 4, 20, 30],
+      "threadNumber": 1,
+      "timeout": 300,
+      "metaheuristicName": "GRASP",
+      "rate": 1000
+    }
+  ]
+}
