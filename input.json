@@ -1,36 +1,22 @@
 {
   "experiments" : [
     {
+      "name": "MCDM_WPM_v1",
+      "rate": 1000,
       "routing": "phy",
-      "pathFindingMethod": "shortestPath",
-      "algorithm": "dijkstra",
-      "idleSlope": "0.75",
-      "tsnSimulationVersion": "tsncf",
-      "evaluatorName": "avbLatencyMathV1",
-      "rate": 1000
-    },
-    {
-      "routing": "phy",
-      "pathFindingMethod": "yen",
-      "algorithm": "U",
-      "idleSlope": "0.75",
-      "tsnSimulationVersion": "tsncf",
-      "evaluatorName": "avbLatencyMathV1",
-      "k": [2, 3, 4, 20, 30],
-      "rate": 1000
-    },
-    {
-      "routing": "phy",
-      "pathFindingMethod": "yen",
-      "algorithm": "RO",
+      "pathFindingMethod": "yen, pathPenalization",
+      "algorithm": "MCDM",
       "idleSlope": 0.75,
       "tsnSimulationVersion": "tsncf",
       "evaluatorName": "avbLatencyMathV1",
       "k": [2, 3, 4, 20, 30],
-      "threadNumber": 1,
-      "timeout": 300,
-      "metaheuristicName": "GRASP",
-      "rate": 1000
+      "unicastCandidateSortingMethod": "deadline",
+      "mcdmObjective": "srtTTLength",
+      "mcdmName": "wpm",
+      "wpmVersion": "v1",
+      "wSRT": [1],
+      "wTT": [1],
+      "wLength": [1]
     }
   ]
 }

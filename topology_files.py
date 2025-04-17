@@ -1,6 +1,6 @@
 import os
 
-topology_application_dict_2_3_4 = {
+mcdm_2_3_4_dict = {
     os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "ABB.xml"): [
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application", "ABB_Unicast", "2,3,4",
                      "ABB_T1.xml"),
@@ -111,7 +111,7 @@ topology_application_dict_2_3_4 = {
     # ],
 }
 
-topology_application_springer_dict = {
+springer_dict = {
     os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "ABB.xml"): [
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application", "ABB_Unicast", "2",
                      "ABB_T1.xml"),
