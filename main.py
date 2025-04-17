@@ -11,6 +11,8 @@ data = open('input.json')
 # deserializing the data
 data = json.load(data)
 
+scenario_dict = topology_files.topology_application_springer_dict
+
 os.chdir(os.path.join(os.path.expanduser("~"), "tsn-simulation"))
 
 logging.basicConfig(level=logging.INFO)
@@ -20,7 +22,7 @@ logger = logging.getLogger()
 for key, value in data.items():
     for experiment in value:
         if "shortestPath" == experiment['pathFindingMethod']:
-            for topology_key, application_value in topology_files.topology_application_dict_2_3_4.items():
+            for topology_key, application_value in scenario_dict.items():
                 for application in application_value:
                     run_string = f"java -jar target/tsn-simulation-1.0-SNAPSHOT-jar-with-dependencies.jar -net {topology_key} -app {application} -routing {experiment['routing']} -pathFindingMethod {experiment['pathFindingMethod']} -algorithm {experiment['algorithm']} -idleSlope {experiment['idleSlope']} -tsnSimulationVersion {experiment['tsnSimulationVersion']} -evaluatorName {experiment['evaluatorName']} -rate {experiment['rate']}"
                     if logger.isEnabledFor(logging.DEBUG):
@@ -30,7 +32,7 @@ for key, value in data.items():
 
 
         if "U" == experiment['algorithm']:
-            for topology_key, application_value in topology_files.topology_application_dict_2_3_4.items():
+            for topology_key, application_value in scenario_dict.items():
                 for application in application_value:
                     for k in experiment['k']:
                         run_string = f"java -jar target/tsn-simulation-1.0-SNAPSHOT-jar-with-dependencies.jar -net {topology_key} -app {application} -routing {experiment['routing']} -pathFindingMethod {experiment['pathFindingMethod']} -algorithm {experiment['algorithm']} -idleSlope {experiment['idleSlope']} -tsnSimulationVersion {experiment['tsnSimulationVersion']} -evaluatorName {experiment['evaluatorName']} -k {k} -rate {experiment['rate']}"
@@ -41,7 +43,7 @@ for key, value in data.items():
 
 
         if "RO" == experiment['algorithm']:
-            for topology_key, application_value in topology_files.topology_application_dict_2_3_4.items():
+            for topology_key, application_value in scenario_dict.items():
                 for application in application_value:
                     for k in experiment['k']:
                         run_string = f"java -jar target/tsn-simulation-1.0-SNAPSHOT-jar-with-dependencies.jar -net {topology_key} -app {application} -routing {experiment['routing']} -pathFindingMethod {experiment['pathFindingMethod']} -algorithm {experiment['algorithm']} -idleSlope {experiment['idleSlope']} -tsnSimulationVersion {experiment['tsnSimulationVersion']} -evaluatorName {experiment['evaluatorName']} -k {k} -threadNumber {experiment['threadNumber']} -timeout {experiment['timeout']} -metaheuristicName {experiment['metaheuristicName']} -rate {experiment['rate']}"
