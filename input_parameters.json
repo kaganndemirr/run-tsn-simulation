@@ -296,7 +296,7 @@
       "rate": 1000,
       "routing": "mtr",
       "mtrName": "hiearchical, kmeans",
-      "-vtNumber": 2,
+      "vtNumber": 2,
       "pathFindingMethod": "yen",
       "algorithm": "RO",
       "idleSlope": 0.75,

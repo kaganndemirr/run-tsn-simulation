@@ -161,20 +161,34 @@ springer_dict = {
 
     os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "TC", "TC1.xml"): [
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                      "TC1_Unicast_Springer", "TC5_T1.xml"),
+                      "TC1_Unicast_Springer", "TC1_T1.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC5_T2.xml"),
+                     "TC1_Unicast_Springer", "TC1_T2.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC5_T3.xml"),
+                     "TC1_Unicast_Springer", "TC1_T3.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC5_T4.xml"),
+                     "TC1_Unicast_Springer", "TC1_T4.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC5_T5.xml"),
+                     "TC1_Unicast_Springer", "TC1_T5.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC5_T6.xml"),
+                     "TC1_Unicast_Springer", "TC1_T6.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC5_T7.xml"),
+                     "TC1_Unicast_Springer", "TC1_T7.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC5_T8.xml"),
+                     "TC1_Unicast_Springer", "TC1_T8.xml"),
+    ]
+}
+
+example_dict = {
+    os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "ABB.xml"): [
+        os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application", "ABB_Unicast", "2",
+                     "ABB_T1.xml")
+    ],
+
+    os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "TC", "TC1.xml"): [
+        os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
+                      "TC1_Unicast_Springer", "TC1_T1.xml"),
+        os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
+                     "TC1_Unicast_Springer", "TC1_T8.xml")
     ]
 }
