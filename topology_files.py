@@ -1,6 +1,6 @@
 import os
 
-mcdm_2_3_4_dict = {
+mcdm_2_3_4= {
     os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "ABB.xml"): [
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application", "ABB_Unicast", "2,3,4",
                      "ABB_T1.xml"),
@@ -111,7 +111,7 @@ mcdm_2_3_4_dict = {
     # ],
 }
 
-springer_dict = {
+springer = {
     os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "ABB.xml"): [
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application", "ABB_Unicast", "2",
                      "ABB_T1.xml"),
@@ -176,19 +176,5 @@ springer_dict = {
                      "TC1_Unicast_Springer", "TC1_T7.xml"),
         os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
                      "TC1_Unicast_Springer", "TC1_T8.xml"),
-    ]
-}
-
-example_dict = {
-    os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "ABB.xml"): [
-        os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application", "ABB_Unicast", "2",
-                     "ABB_T1.xml")
-    ],
-
-    os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "architecture", "TC", "TC1.xml"): [
-        os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                      "TC1_Unicast_Springer", "TC1_T1.xml"),
-        os.path.join(os.path.expanduser("~"), "tsn-simulation", "resources", "application",
-                     "TC1_Unicast_Springer", "TC1_T8.xml")
     ]
 }

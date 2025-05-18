@@ -1,9 +1,19 @@
-# importing the module
 import json
 import logging
 import os
+import argparse
 
+import constants
 import topology_files
+
+parser = argparse.ArgumentParser(prog='run_tsn_simulation')
+parser.add_argument('-debug', help='Enable debug mode', type=bool)
+parser.add_argument('-scenario', help='Scenarios (Choices: mcdm_2_3_4, springer)')
+
+args = parser.parse_args()
+
+debug = args.debug
+scenario = args.scenario
 
 # opening the JSON file
 data = open('input.json')
@@ -11,13 +21,23 @@ data = open('input.json')
 # deserializing the data
 data = json.load(data)
 
-scenario_dict = topology_files.example_dict
-
 os.chdir(os.path.join(os.path.expanduser("~"), "tsn-simulation"))
 
-logging.basicConfig(level=logging.INFO)
+if debug:
+    logging.basicConfig(level=logging.DEBUG)
+
+else:
+    logging.basicConfig(level=logging.INFO)
 
 logger = logging.getLogger()
+
+
+scenario_dict = dict
+
+if scenario == constants.MCDM_2_3_4:
+    scenario_dict = topology_files.mcdm_2_3_4
+elif scenario == constants.SPRINGER:
+    scenario_dict = topology_files.springer
 
 for key, value in data.items():
     for experiment in value:
