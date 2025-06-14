@@ -23,11 +23,8 @@ data = json.load(data)
 
 os.chdir(os.path.join(os.path.expanduser("~"), "tsn-simulation"))
 
-if debug:
-    logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
-else:
-    logging.basicConfig(level=logging.INFO)
 
 logger = logging.getLogger()
 
