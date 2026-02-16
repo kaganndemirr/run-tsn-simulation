@@ -35,7 +35,7 @@ if scenario == constants.MCDM_2_3_4:
     scenario_dict = topology_files.mcdm_2_3_4
 elif scenario == constants.SPRINGER:
     scenario_dict = topology_files.springer
-elif scenario == topology_files.ijcs:
+elif scenario == constants.ijcs:
     scenario_dict = topology_files.ijcs
 
 for key, value in data.items():

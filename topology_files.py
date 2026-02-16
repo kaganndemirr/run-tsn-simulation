@@ -180,7 +180,7 @@ springer = {
 }
 
 ijcs = {
-    os.path.join(os.path.expanduser("~"), "TSNResources", "Topology", "SNSimulation", "ABB", "ABBXLarge.xml"): [
+    os.path.join(os.path.expanduser("~"), "TSNResources", "Topology", "TSNSimulation", "ABB", "ABBXLarge.xml"): [
         os.path.join(os.path.expanduser("~"), "TSNResources", "Application", "TSNSimulation", "SRTAndTT", "ABB",
                      "ABBXLarge", "Deadline=10", "ABBXLarge_T1.xml"),
         os.path.join(os.path.expanduser("~"), "TSNResources", "Application", "TSNSimulation", "SRTAndTT", "ABB",
