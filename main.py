@@ -8,7 +8,7 @@ import topology_files
 
 parser = argparse.ArgumentParser(prog='run_tsn_simulation')
 parser.add_argument('-debug', help='Enable debug mode', type=bool)
-parser.add_argument('-scenario', help='Scenarios (Choices: mcdm_2_3_4, springer)')
+parser.add_argument('-scenario', help='Scenarios (Choices: mcdm_2_3_4, springer, ijcs)')
 
 args = parser.parse_args()
 
@@ -35,6 +35,8 @@ if scenario == constants.MCDM_2_3_4:
     scenario_dict = topology_files.mcdm_2_3_4
 elif scenario == constants.SPRINGER:
     scenario_dict = topology_files.springer
+elif scenario == topology_files.ijcs:
+    scenario_dict = topology_files.ijcs
 
 for key, value in data.items():
     for experiment in value:

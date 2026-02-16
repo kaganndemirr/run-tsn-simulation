@@ -178,3 +178,16 @@ springer = {
                      "TC1_Unicast_Springer", "TC1_T8.xml"),
     ]
 }
+
+ijcs = {
+    os.path.join(os.path.expanduser("~"), "TSNResources", "Topology", "SNSimulation", "ABB", "ABBXLarge.xml"): [
+        os.path.join(os.path.expanduser("~"), "TSNResources", "Application", "TSNSimulation", "SRTAndTT", "ABB",
+                     "ABBXLarge", "Deadline=10", "ABBXLarge_T1.xml"),
+        os.path.join(os.path.expanduser("~"), "TSNResources", "Application", "TSNSimulation", "SRTAndTT", "ABB",
+                     "ABBXLarge", "Deadline=10", "ABBXLarge_T2.xml"),
+        os.path.join(os.path.expanduser("~"), "TSNResources", "Application", "TSNSimulation", "SRTAndTT", "ABB",
+                     "ABBXLarge", "Deadline=10", "ABBXLarge_T3.xml"),
+        os.path.join(os.path.expanduser("~"), "TSNResources", "Application", "TSNSimulation", "SRTAndTT", "ABB",
+                     "ABBXLarge", "Deadline=10", "ABBXLarge_T4.xml")
+    ]
+}
